@@ -1,4 +1,4 @@
-lang_selected = 'eng'; // DEFAULT LANGUAGE
+lang_selected = 'ger'; // DEFAULT LANGUAGE
 window.onload = function () { changeLang(lang_selected); }
 // SET LANGUAGES
 function changeLang(lang){
@@ -11,14 +11,14 @@ function changeLang(lang){
 			document.getElementById( 'ds-l-rus' ).style.opacity = '.5';
 			document.getElementById( 'ds-l-rom' ).style.opacity = '.5';
 			document.getElementById( 'cell_your_selection' ).innerHTML = 'Your Selection';
-			document.getElementById( 'bet_on_home' ).innerHTML = 'Home';
-			document.getElementById( 'bet_on_away' ).innerHTML = 'Away';
-			document.getElementById( 'bet_on_over' ).innerHTML = 'Over';
-			document.getElementById( 'bet_on_under' ).innerHTML = 'Under';
-			document.getElementById( 'cell_odds_format' ).innerHTML = 'Odd Format';
-			document.getElementById( 'de_op' ).innerHTML = '1x2';
+			document.getElementById( 'bet_on_home_l' ).innerHTML = '<span></span>Home Team';
+			document.getElementById( 'bet_on_away_l' ).innerHTML = '<span></span>Away Team';
+			document.getElementById( 'bet_on_over_l' ).innerHTML = '<span></span>Over';
+			document.getElementById( 'bet_on_under_l' ).innerHTML = '<span></span>Under';
+			document.getElementById( 'cell_odds_format' ).innerHTML = 'Odds Format';
+			//document.getElementById( 'de_op' ).innerHTML = 'Decimal Odds';
 			document.getElementById( 'fr_op' ).innerHTML = 'Fractional Odds';
-			document.getElementById( 'am_op' ).innerHTML = 'American Odds';
+			//document.getElementById( 'am_op' ).innerHTML = 'American Odds';
 			document.getElementById( 'ho_op' ).innerHTML = 'Hong Kong Odds';
 			document.getElementById( 'in_op' ).innerHTML = 'Indo Odds';
 			document.getElementById( 'ma_op' ).innerHTML = 'Malay Odds';
@@ -26,9 +26,9 @@ function changeLang(lang){
 			document.getElementById( 'cell_handicap' ).innerHTML = 'Home Team Asian Handicap';
 			document.getElementById( 'stake_cell' ).innerHTML = 'Stake';
 			document.getElementById( 'calculation_cell' ).innerHTML = 'Calculation Options';
-			document.getElementById( 'final_score_check' ).innerHTML = 'Specific Final Score';
-			document.getElementById( 'final_all_check' ).innerHTML = 'All Scenarios';
-			document.getElementById( 'specific_cell' ).innerHTML = 'Goal Result';
+			document.getElementById( 'final_score_check_l' ).innerHTML = '<span></span>Specific Final Score';
+			document.getElementById( 'final_all_check_l' ).innerHTML = '<span></span>All Scenarios';
+			document.getElementById( 'specific_cell' ).innerHTML = 'Specific Final Score';
 			document.getElementById( 'score-home' ).innerHTML = 'Home Team';
 			document.getElementById( 'score-away' ).innerHTML = 'Away Team';
 			document.getElementById( 'btn_calculate' ).innerHTML = 'Calculate';
@@ -36,9 +36,9 @@ function changeLang(lang){
 			home_or_away = "Home team";
 			lang_selected = 'eng';
 			document.getElementById( 'odds_error' ).innerHTML = ''; // CLEAN ERROR
-			lang_win = '<b style="color:#4caf50">Win</b>';
-			lang_push = '<b style="color:#A41CD3">Push</b>';
-			lang_lose = '<b style="color:#e91e63">Lose</b>';
+			lang_win = 'Win';
+			lang_push = 'Push';
+			lang_lose = 'Lose';
 			lang_half_win = 'Half Win';
 			lang_half_lose = 'Half Lose';
 		break;
@@ -48,37 +48,35 @@ function changeLang(lang){
 			document.getElementById( 'ds-l-pol' ).style.opacity = '.5';
 			document.getElementById( 'ds-l-rus' ).style.opacity = '.5';
 			document.getElementById( 'ds-l-rom' ).style.opacity = '.5';
-			document.getElementById( 'cell_your_selection' ).innerHTML = 'အသင္းေရြးရန္';
-			document.getElementById( 'bet_on_home' ).innerHTML = 'အိမ္ကြင္း';
-			document.getElementById( 'bet_on_away' ).innerHTML = 'အေ၀းကြင္း';
-			document.getElementById( 'bet_on_over' ).innerHTML = 'ဂုုိးေပၚ';
-			document.getElementById( 'bet_on_under' ).innerHTML = 'ဂုုိးေအာက္';
-			document.getElementById( 'cell_odds_format' ).innerHTML = 'တြက္လုုိေသာေၾကးအားေရြးပါ';
-			document.getElementById( 'de_op' ).innerHTML = '1x2';
-      document.getElementById( 'ho_op' ).innerHTML = 'Hong Kong ေၾကး';
-      document.getElementById( 'in_op' ).innerHTML = 'Indo ေၾကး';
-			document.getElementById( 'ma_op' ).innerHTML = 'Malay ေၾကး';
+			document.getElementById( 'cell_your_selection' ).innerHTML = 'ေရြးပါ';
+			document.getElementById( 'bet_on_home_l' ).innerHTML = '<span class=radio check></span>အိမ္ကြင္း';
+			document.getElementById( 'bet_on_away_l' ).innerHTML = '<span class="circle"></span><span class="circle-check">အေ၀းကြင္း';
+			document.getElementById( 'bet_on_over_l' ).innerHTML = 'ဂုုိးေပၚ';
+			document.getElementById( 'bet_on_under_l' ).innerHTML = 'ဂုုိးေအာက္';
+			document.getElementById( 'cell_odds_format' ).innerHTML = 'ေၾကးအမ်ိဳးအစား';
+			document.getElementById( 'de_op' ).innerHTML = '1X2 ေၾကး';
 			document.getElementById( 'fr_op' ).innerHTML = 'Fractional ေၾကး';
-			document.getElementById( 'am_op' ).innerHTML = 'US ေၾကး';
-
-
-			document.getElementById( 'cell_odds' ).innerHTML = 'အိမ္ကြင္းေလာင္းေၾကးအဆ <br>Home Team Odds';
-			document.getElementById( 'cell_handicap' ).innerHTML = 'အိမ္ကြင္ေပါက္ေၾကး  ';
-			document.getElementById( 'stake_cell' ).innerHTML = 'ကစားေသာယူနစ္';
-			document.getElementById( 'calculation_cell' ).innerHTML = 'တြက္ခ်က္ပုုံေရြးရန္';
-			document.getElementById( 'final_score_check' ).innerHTML = 'ဂုုိးရလဒ္တိတိက်က်နဲ႔ေရြးရန္';
-			document.getElementById( 'final_all_check' ).innerHTML = 'ရလဒ္အားလုုံး';
-			document.getElementById( 'specific_cell' ).innerHTML = 'ပြဲျပီးဂုုိးရလဒ္';
-			document.getElementById( 'score-home' ).innerHTML = 'အိမ္ရွင္';
+			document.getElementById( 'am_op' ).innerHTML = 'Amerikanisches ေၾကး';
+			document.getElementById( 'ho_op' ).innerHTML = 'Hong Kong ေၾကး';
+			document.getElementById( 'in_op' ).innerHTML = 'Indo ေၾကး';
+			document.getElementById( 'ma_op' ).innerHTML = 'Malay ေၾကး';
+			document.getElementById( 'cell_odds' ).innerHTML = 'ေပါက္ေၾကး';
+			document.getElementById( 'cell_handicap' ).innerHTML = ' HDP ေၾကး';
+			document.getElementById( 'stake_cell' ).innerHTML = 'ေလာင္းေၾကး';
+			document.getElementById( 'calculation_cell' ).innerHTML = 'တြက္လုုိသည့္ ပုုံစံ';
+			document.getElementById( 'final_score_check_l' ).innerHTML = '<span></span>ဂုုိးရလဒ္';
+			document.getElementById( 'final_all_check_l' ).innerHTML = '<span></span>ျဖစ္နုုိင္ေျခ';
+			document.getElementById( 'specific_cell' ).innerHTML = 'ဂုုိးရလဒ္';
+			document.getElementById( 'score-home' ).innerHTML = 'အိမ္ကြင္း';
 			document.getElementById( 'score-away' ).innerHTML = 'အေ၀းကြင္း';
 			document.getElementById( 'btn_calculate' ).innerHTML = 'တြက္မယ္';
-			document.getElementById( 'btn_reset' ).innerHTML = 'ျပန္စမယ္';
-			home_or_away = "အိမ္ရွင္အသင္း";
+			document.getElementById( 'btn_reset' ).innerHTML = 'ျပန္စရန္';
+			home_or_away = "အိမ္ကြင္း";
 			lang_selected = 'ger';
 			document.getElementById( 'odds_error' ).innerHTML = ''; // CLEAN ERROR
-			lang_win = '<span style="color:#4caf50">နုုိင္</span>';
-			lang_push = '<span style="color:#A41CD3">သေရ</span>';
-			lang_lose = '<span style="color:#e91e63">ရႈံး</span>';
+			lang_win = 'နုုိင္';
+			lang_push = 'သေရ';
+			lang_lose = 'ရႈံး';
 			lang_half_win = 'တစ္၀က္နုုိင္';
 			lang_half_lose = 'တစ္၀က္ရႈံး';
 
@@ -199,7 +197,7 @@ function changeLang(lang){
 		break;
 	}
 }
-// START CALCULATOR
+// START CALCULATO
 // START MAKE THE BET ON SELECTION
 selected_bet_on = 'home'; // DEFAULT SELECTED BET ON IS HOME
 final_score_type = 'score'; // DEFAULT SCORE TYPE
@@ -210,13 +208,13 @@ function changeLabel(id){ // RADIO BUTTON SELECTION ACTIONS
 		case 'bet_on_selection_home':
 			// CHANGE ODDS TEXT
 			if ( lang_selected == 'eng' ) { text_odds = 'Home Team Odds'; }
-			if ( lang_selected == 'ger' ) { text_odds = 'အိမ္ကြင္းေၾကး'; }
+			if ( lang_selected == 'ger' ) { text_odds = 'အိမ္ကြင္းေၾကး '; }
 			if ( lang_selected == 'pol' ) { text_odds = 'Kurs na wygraną Gospodarzy'; }
 			if ( lang_selected == 'rus' ) { text_odds = 'Коэффициенты на победу хозяев'; }
 			if ( lang_selected == 'rom' ) { text_odds = 'Cote pentru Echipa Gazdă'; }
 			// CHANGE HANDICAP TEXT
 			if ( lang_selected == 'eng' ) { text_handicap = 'Home Team Asian Handicap'; }
-			if ( lang_selected == 'ger' ) { text_handicap = ' အိမ္ကြင္း Handicap '; }
+			if ( lang_selected == 'ger' ) { text_handicap = ' အိမ္ကြင္း HDP '; }
 			if ( lang_selected == 'pol' ) { text_handicap = 'Handicap - Drużyna Gospodarzy'; }
 			if ( lang_selected == 'rus' ) { text_handicap = 'Азиатский гандикап - победа хозяев'; }
 			if ( lang_selected == 'rom' ) { text_handicap = 'Handicapul Asiatic pentru Echipa Gazdă'; }
@@ -234,13 +232,13 @@ function changeLabel(id){ // RADIO BUTTON SELECTION ACTIONS
 		case 'bet_on_selection_away':
 			// CHANGE ODDS TEXT
 			if ( lang_selected == 'eng' ) { text_odds = 'Away Team Odds'; }
-			if ( lang_selected == 'ger' ) { text_odds = 'အေ၀းကြင္းေၾကး'; }
+			if ( lang_selected == 'ger' ) { text_odds = 'အေ၀းကြင္းအေလးေပးမႈ'; }
 			if ( lang_selected == 'pol' ) { text_odds = 'Kurs na wygraną Gości'; }
 			if ( lang_selected == 'rus' ) { text_odds = 'Коэффициенты на победу гостей'; }
 			if ( lang_selected == 'rom' ) { text_odds = 'Cote pentru Echipa Oaspete'; }
 			// CHANGE HANDICAP TEXT
 			if ( lang_selected == 'eng' ) { text_handicap = 'Away Team Asian Handicap'; }
-			if ( lang_selected == 'ger' ) { text_handicap = ' အေ၀းကြင္း AH'; }
+			if ( lang_selected == 'ger' ) { text_handicap = 'အေ၀းကြင္း HDP'; }
 			if ( lang_selected == 'pol' ) { text_handicap = 'Handicap - Drużyna Gości'; }
 			if ( lang_selected == 'rus' ) { text_handicap = 'Азиатский гандикап - победа гостей'; }
 			if ( lang_selected == 'rom' ) { text_handicap = 'Handicapul Asiatic pentru Echipa Oaspete'; }
@@ -283,9 +281,7 @@ function changeLabel(id){ // RADIO BUTTON SELECTION ACTIONS
 			// CHANGE HANDICAP TEXT
 			if ( lang_selected == 'eng' ) { text_handicap = 'Under'; }
 			if ( lang_selected == 'ger' ) { text_handicap = 'ဂုုိးေအာက္'; }
-			if ( lang_selected == 'pol' ) { text_handicap = 'Poniżej'; }
-			if ( lang_selected == 'rus' ) { text_handicap = 'Меньше'; }
-			if ( lang_selected == 'rom' ) { text_handicap = 'Dedesubt (Under)'; }
+
 			selected_bet_on = 'under';
 			document.getElementById( 'selection_cell' ).innerHTML = select_output_over; // MAKE THE OUTPUT
 			document.getElementById( 'cell_odds' ).innerHTML = text_odds; // CHANGE ODDS TEXT
@@ -387,7 +383,7 @@ function showResult(selectObj){
 			}
 			else {
 				if ( lang_selected == 'eng' ) { document.getElementById( 'odds_error' ).innerHTML = 'Wrong Decimal Odd'; }
-				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'ေၾကးထည့္သြင္းပုုံ မွားယြင္းေနပါတယ္။'; }
+				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = '1X2 ေၾကးထည့္ပုုံ ျပန္စစ္ေဆးပါ'; }
 				if ( lang_selected == 'pol' ) { document.getElementById( 'odds_error' ).innerHTML = 'Nieprawidłowy kurs dziesiętny'; }
 				if ( lang_selected == 'rus' ) { document.getElementById( 'odds_error' ).innerHTML = 'Неверный десятичный коэффициент'; }
 				if ( lang_selected == 'rom' ) { document.getElementById( 'odds_error' ).innerHTML = 'Cote decimale incorecte'; }
@@ -422,7 +418,7 @@ function showResult(selectObj){
 			}
 			else {
 				if ( lang_selected == 'eng' ) { document.getElementById( 'odds_error' ).innerHTML = 'Wrong Fractional Odd'; }
-				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'Fractional ေၾကးထည့္သြင္းပုုံ မွားေနပါတယ္။'; }
+				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'ungültige Bruchquote'; }
 				if ( lang_selected == 'pol' ) { document.getElementById( 'odds_error' ).innerHTML = 'Nieprawidłowy kurs ułamkowy'; }
 				if ( lang_selected == 'rus' ) { document.getElementById( 'odds_error' ).innerHTML = 'Неверный дробный коэффициент'; }
 				if ( lang_selected == 'rom' ) { document.getElementById( 'odds_error' ).innerHTML = 'Cote fracţionare incorecte'; }
@@ -536,7 +532,7 @@ function showResult(selectObj){
 			}
 			else {
 				if ( lang_selected == 'eng' ) { document.getElementById( 'odds_error' ).innerHTML = 'Wrong American Odd'; }
-				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'American ေၾကး ထည့္သြင္းပုုံမွားေနပါတယ္။'; }
+				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'ungültige Amerikan. Quote'; }
 				if ( lang_selected == 'pol' ) { document.getElementById( 'odds_error' ).innerHTML = 'Nieprawidłowy kurs amerykański'; }
 				if ( lang_selected == 'rus' ) { document.getElementById( 'odds_error' ).innerHTML = 'Неверный американский коэффициент'; }
 				if ( lang_selected == 'rom' ) { document.getElementById( 'odds_error' ).innerHTML = 'Cote americane incorecte'; }
@@ -586,7 +582,7 @@ function showResult(selectObj){
 			}
 			else {
 				if ( lang_selected == 'eng' ) { document.getElementById( 'odds_error' ).innerHTML = 'Wrong Hong Kong Odd'; }
-				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = ' Hong Kong ေၾကးထည့္သြင္းပုုံ မွားယြင္းေနပါသည္။'; }
+				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'ေဟာင္ေကာင္ေပါက္ေၾကးတြင္ မွားယြင္းေနပါတယ္'; }
 				if ( lang_selected == 'pol' ) { document.getElementById( 'odds_error' ).innerHTML = 'Nieprawidłowy kurs hongkoński'; }
 				if ( lang_selected == 'rus' ) { document.getElementById( 'odds_error' ).innerHTML = 'Неверный гонконгский коэффициент'; }
 				if ( lang_selected == 'rom' ) { document.getElementById( 'odds_error' ).innerHTML = 'Cote Hong Kong incorecte'; }
@@ -642,8 +638,8 @@ function showResult(selectObj){
 			}
 			else {
 				if ( lang_selected == 'eng' ) { document.getElementById( 'odds_error' ).innerHTML = 'Wrong Indo Odd'; }
-				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'ungültige Indo Quote'; }
-				if ( lang_selected == 'pol' ) { document.getElementById( 'odds_error' ).innerHTML = 'Indo ေၾကး ထည့္သြင္းပုံ မွားယြင္းေနပါတယ္။'; }
+				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = ' အင္ဒုုိေပါက္ေၾကးတြင္ မွားယြင္းေနပါတယ္။’'; }
+				if ( lang_selected == 'pol' ) { document.getElementById( 'odds_error' ).innerHTML = 'Nieprawidłowy kurs indo'; }
 				if ( lang_selected == 'rus' ) { document.getElementById( 'odds_error' ).innerHTML = 'Неверный индонезийсикй коэффициент'; }
 				if ( lang_selected == 'rom' ) { document.getElementById( 'odds_error' ).innerHTML = 'Cote Indo icnorecte'; }
 				previous == 'in';
@@ -680,7 +676,7 @@ function showResult(selectObj){
 			}
 			else {
 				if ( lang_selected == 'eng' ) { document.getElementById( 'odds_error' ).innerHTML = 'Wrong Malay Odd'; }
-				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'Malay ေၾကးထည့္သြင္းပုံ မွားယြင္းေနပါတယ္။'; }
+				if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'မေလးေပါက္ေၾကးထည့္သြင္းပုုံ မွားေနပါတယ္။' ;  }
 				if ( lang_selected == 'pol' ) { document.getElementById( 'odds_error' ).innerHTML = 'Nieprawidłowy kurs malajski'; }
 				if ( lang_selected == 'rus' ) { document.getElementById( 'odds_error' ).innerHTML = 'Неверный малазийский коэффициент'; }
 				if ( lang_selected == 'rom' ) { document.getElementById( 'odds_error' ).innerHTML = 'Cote malaieziene incorecte'; }
@@ -723,61 +719,61 @@ function calculate() {
 			if ( checking <= 1 && checking > -1 && checking != 0 ) { status = 'ok'; } else { status = 'no'; }
 		}
 		if ( lang_selected == 'eng' ) { heading_text = 'Asian Handicap Bet Outcome'; }
-		if ( lang_selected == 'ger' ) { heading_text = 'Asian Handicap တြက္ခ်က္မႈရလဒ္'; }
+		if ( lang_selected == 'ger' ) { heading_text = '<strong style="color:blue">တြက္ခ်က္မႈ ရလဒ္</strong>'; }
 		if ( lang_selected == 'pol' ) { heading_text = 'Rozstrzygnięcie zakładu z Handicapem'; }
 		if ( lang_selected == 'rus' ) { heading_text = 'Результат азиатского гандикапа'; }
 		if ( lang_selected == 'rom' ) { heading_text = 'Rezultat Pariu Handicap Asiatic'; }
 
 		if ( lang_selected == 'eng' ) { result_cell = 'Result'; }
-		if ( lang_selected == 'ger' ) { result_cell = 'နုုိင္/ရႈံး'; }
+		if ( lang_selected == 'ger' ) { result_cell = 'ရလဒ္'; }
 		if ( lang_selected == 'pol' ) { result_cell = 'Wynik'; }
 		if ( lang_selected == 'rus' ) { result_cell = 'Результат'; }
 		if ( lang_selected == 'rom' ) { result_cell = 'Rezultat'; }
 
 		if ( lang_selected == 'eng' ) { payout_cell = 'Payout'; }
-		if ( lang_selected == 'ger' ) { payout_cell = 'ေလ်ာ္ေၾကး'; }
+		if ( lang_selected == 'ger' ) { payout_cell = 'အရင္း+အနုုိင္'; }
 		if ( lang_selected == 'pol' ) { payout_cell = 'Wypłata'; }
 		if ( lang_selected == 'rus' ) { payout_cell = 'Выплата'; }
 		if ( lang_selected == 'rom' ) { payout_cell = 'Plată'; }
 
 		if ( lang_selected == 'eng' ) { profit_cell = 'Profit'; }
-		if ( lang_selected == 'ger' ) { profit_cell = 'အသားတင္အျမတ္'; }
+		if ( lang_selected == 'ger' ) { profit_cell = 'အျမတ္'; }
 		if ( lang_selected == 'pol' ) { profit_cell = 'Zysk'; }
 		if ( lang_selected == 'rus' ) { profit_cell = 'Прибыль'; }
 		if ( lang_selected == 'rom' ) { profit_cell = 'Profit'; }
 
 		if ( lang_selected == 'eng' ) { half_bets_cell = 'Half Bets'; }
-		if ( lang_selected == 'ger' ) { half_bets_cell = 'AH ပုုံစံ'; }
+		if ( lang_selected == 'ger' ) { half_bets_cell = 'HDPေလာင္းျခင္း'; }
 		if ( lang_selected == 'pol' ) { half_bets_cell = 'Zakłady składowe'; }
 		if ( lang_selected == 'rus' ) { half_bets_cell = 'Половина ставки'; }
 		if ( lang_selected == 'rom' ) { half_bets_cell = 'Pariuri pe reprize'; }
 
 		if ( lang_selected == 'eng' ) { overall_bet_cell = 'Overall Bet'; }
-		if ( lang_selected == 'ger' ) { overall_bet_cell = 'ရလဒ္'; }
+		if ( lang_selected == 'ger' ) { overall_bet_cell = 'ရႈံး/နုုိင္'; }
 		if ( lang_selected == 'pol' ) { overall_bet_cell = 'Całkowity zakład'; }
 		if ( lang_selected == 'rus' ) { overall_bet_cell = 'Полная ставка'; }
 		if ( lang_selected == 'rom' ) { overall_bet_cell = 'Pariu general'; }
 
 		if ( lang_selected == 'eng' ) { wager_cell = 'Wager'; }
-		if ( lang_selected == 'ger' ) { wager_cell = 'ေလာင္းေၾကး'; }
+		if ( lang_selected == 'ger' ) { wager_cell = 'ေၾကး'; }
 		if ( lang_selected == 'pol' ) { wager_cell = 'Zakład'; }
 		if ( lang_selected == 'rus' ) { wager_cell = 'Ставка'; }
 		if ( lang_selected == 'rom' ) { wager_cell = 'Pariu/miză'; }
 
 		if ( lang_selected == 'eng' ) { msg_draw = 'Game ends in a draw'; }
-		if ( lang_selected == 'ger' ) { msg_draw = 'သေရ ရလဒ္ျဖင့္ ျပီးဆုုံးခဲ့ပါက'; }
+		if ( lang_selected == 'ger' ) { msg_draw = 'သေရရလဒ္ျဖင့္ ပြဲျပီးခဲ့ပါက'; }
 		if ( lang_selected == 'pol' ) { msg_draw = 'Mecz zakończony remisem'; }
 		if ( lang_selected == 'rus' ) { msg_draw = 'Исход игры - ничья'; }
 		if ( lang_selected == 'rom' ) { msg_draw = 'Jocul se termină la egalitate'; }
 
 		if ( lang_selected == 'eng' ) { msg_win = home_or_away + ' wins'; }
-		if ( lang_selected == 'ger' ) { msg_win = home_or_away + 'မွ အနုုိင္ရခဲ့ပါက'; }
+		if ( lang_selected == 'ger' ) { msg_win = home_or_away + ' မွ နုုိင္ခဲ့ပါက'; }
 		if ( lang_selected == 'pol' ) { msg_win = 'Wygrana drużyny ' + home_or_away; }
 		if ( lang_selected == 'rus' ) { msg_win = home_or_away + ' побеждают'; }
 		if ( lang_selected == 'rom' ) { msg_win = home_or_away + ' câştigă'; }
 
 		if ( lang_selected == 'eng' ) { msg_lose = home_or_away + ' loses'; }
-		if ( lang_selected == 'ger' ) { msg_lose = home_or_away + ' မွ ရႈံးခဲ့ပါက'; }
+		if ( lang_selected == 'ger' ) { msg_lose = home_or_away + ' မွ ရႈံးခဲ႔ပါက'; }
 		if ( lang_selected == 'pol' ) { msg_lose = 'Przegrana drużyny ' + home_or_away; }
 		if ( lang_selected == 'rus' ) { msg_lose = home_or_away + ' проигрывают'; }
 		if ( lang_selected == 'rom' ) { msg_lose = home_or_away + ' pierde'; }
@@ -897,15 +893,15 @@ function calculate() {
 					if ( result_number == 1 ) {
 						if ( handicap_value == -4 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' wins by 5 goals or more'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၅ ဂုုိး သုုိ႔ ၅ ဂုုိးအထက္ဆုုိပါက အနုုိင္ရပါသည္။'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + 'မွ ၅ ဂုုိး သုုိ႔ ၅ ဂုုိးအထက္ဆုုိပါက' ; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 5 lub więcej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - победа с разницей в 5 голов или более'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' câştigă la diferenţă de 5 goluri sau mai mult'; }
 							repeat_times = 1;
 						}
 						if ( handicap_value == -3 || handicap_value == -3.5 ) {
-							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' wins by 4 goals or more'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၄ ဂုုိး သုုိ႔ ၄ ဂုုိး အထက္ဆုုိပါက အနုုိင္ရပါသည္။'; }
+							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + '  wins by 4 goals or more'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၄ ဂုုိး သုုိ႔ ၄ ဂုုိးအထက္ဆုုိပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 4 lub więcej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - победа с разницей в 4 гола или более'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' câştigă la diferenţă de 4 goluri sau mai mult'; }
@@ -913,7 +909,7 @@ function calculate() {
 						}
 						if ( handicap_value == -2 || handicap_value == -2.5 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' wins by 3 goals or more'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၃ ဂုုိး သုုိ႔ ၃ ဂုုိးအထက္ဆုုိပါက အနုုိင္ရပါသည္။'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၃ ဂုုိး သုုိ႔ ၃ ဂုုိးအထက္ဆုုိပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 3 lub więcej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - победа с разницей в 3 гола или более'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' câştigă la diferenţă de 3 goluri sau mai mult'; }
@@ -921,7 +917,7 @@ function calculate() {
 						}
 						if ( handicap_value == -1 || handicap_value == -1.5 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' wins by 2 goals or more'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၂ ဂုုိး သုုိ႔ ၂ ဂုုိးအထက္ဆုုိပါက အနုုိင္ရပါသည္။'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၂ ဂုုိး သုုိ႔ ၂ ဂုုိးအထက္ဆုုိပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 2 lub więcej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - победа с разницей в 2 гола или более'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' câştigă la diferenţă de 2 goluri sau mai mult'; }
@@ -939,8 +935,8 @@ function calculate() {
 						if ( handicap_value == 1.5 || handicap_value == 2 ) {
 							result_texta[1] = msg_win;
 							result_texta[2] = msg_draw;
-							if ( lang_selected == 'ger' ) { result_texta[3] = home_or_away + ' verliert mit 1 Tor Rückstand'; }
-							if ( lang_selected == 'pol' ) { result_texta[3] = 'Przegrana drużyny ' + home_or_away + ' 1 golem'; }
+							if ( lang_selected == 'ger' ) { result_texta[3] = home_or_away + 'loses by 1 goals or less '; }
+							if ( lang_selected == 'pol' ) { result_texta[3] = 'Przegrana drużyny ' + home_or_away + 'မွ ၁ ဂုုိး သုုိ႔ ၁ ဂုုိးေအာက္ဆုုိပါက'; }
 							if ( lang_selected == 'rus' ) { result_texta[3] = home_or_away + ' - проигрыш с разницей в 1 гол'; }
 							if ( lang_selected == 'rom' ) { result_texta[3] = home_or_away + ' pierde la diferenţă de 1 gol'; }
 							repeat_times = 3;
@@ -949,7 +945,7 @@ function calculate() {
 							result_texta[1] = msg_win;
 							result_texta[2] = msg_draw;
 							if ( lang_selected == 'eng' ) { result_texta[3] = home_or_away + ' loses by 2 goals or less'; }
-							if ( lang_selected == 'ger' ) { result_texta[3] = home_or_away + ' မွ ၂ ဂိုးသို႔ ၂ ဂိုးေအာက္ ဆိုပါက ႐ႈံးပါသည္။'; }
+							if ( lang_selected == 'ger' ) { result_texta[3] = home_or_away + ' မွ ၂ ဂုုိး သုုိ႔ ၂ ဂုုိးေအာက္ဆုုိပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[3] = 'Przegrana drużyny ' + home_or_away + ' 2 lub mniej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[3] = home_or_away + ' - проигрыш с разницей в 2 гола или менее'; }
 							if ( lang_selected == 'rom' ) { result_texta[3] = home_or_away + ' pierde la diferenţă de 2 goluri sau mai puţin'; }
@@ -959,7 +955,7 @@ function calculate() {
 							result_texta[1] = msg_win;
 							result_texta[2] = msg_draw;
 							if ( lang_selected == 'eng' ) { result_texta[3] = home_or_away + ' loses by 3 goals or less'; }
-							if ( lang_selected == 'ger' ) { result_texta[3] = home_or_away + ' မွ ၃ ဂိုး သို႔ ၃ ဂိုးေအာက္ဆိုပါက ႐ႈံးပါသည္။'; }
+							if ( lang_selected == 'ger' ) { result_texta[3] = home_or_away + 'မွ ၁ ဂုုိး သုုိ႔ ၁ ဂုုိးေအာက္ဆုုိပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[3] = 'Przegrana drużyny ' + home_or_away + ' 3 lub mniej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[3] = home_or_away + ' - проигрыш с разницей в 3 гола или менее'; }
 							if ( lang_selected == 'rom' ) { result_texta[3] = home_or_away + ' pierde la diferenţă de 3 goluri sau mai puţin'; }
@@ -982,8 +978,8 @@ function calculate() {
 							}
 							if ( lang_selected == 'ger' ) {
 								if ( z > 1 ) { pl = ' Toren'; } else { pl = ' Tor'; } // PLURAL
-								if ( x <= 1 ) { win_lose_text = ' အနုုိင္'; win_lose_text2 = ' ႏိုင္'}
-								if ( x >= 1 ) { win_lose_text = ' ႐ႈံး'; win_lose_text2 = ' အ႐ႈံး'}
+								if ( x <= 1 ) { win_lose_text = ' နုုိင္'; win_lose_text2 = ' Vorsprung'}
+								if ( x >= 1 ) { win_lose_text = ' ရႈံး'; win_lose_text2 = ' Rückstand'}
 								if ( handicap_value == x ) {
 									result_texta[1] = home_or_away + win_lose_text + ' mit ' + z + pl + win_lose_text2; // GENERATE TEXT
 								}
@@ -1023,7 +1019,7 @@ function calculate() {
 					if ( result_number == 3 ) {
 						if ( handicap_value == -3.5 || handicap_value == -4 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' wins by 3 goals or less'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၃ ဂိုး သို႔ ၃ ဂိုးအထက္ဆိုပါက ႏိုင္ပါသည္။'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၃ ဂုုိး သုုိ႔ ၃ ဂုုိးေအာက္ဆုုိပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 3 lub mniej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - победа с разницей в 3 гола или менее'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' câştigă la diferenţă de 3 goluri sau mai puţin'; }
@@ -1033,7 +1029,7 @@ function calculate() {
 						}
 						if ( handicap_value == -2.5 || handicap_value == -3 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' wins by 2 goals or less'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၂ ဂိုး သို႔ ၂ ဂိုးေအာက္ဆိုပါက ႏိုင္ပါသည္။ '; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၂ ဂုုိး သုုိ႔ ၂ ဂုုိးေအာက္ဆုုိပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 2 lub mniej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - победа с разницей в 2 гола или менее'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' câştigă la diferenţă de 2 goluri sau mai puţin'; }
@@ -1043,7 +1039,7 @@ function calculate() {
 						}
 						if ( handicap_value == -1.5 || handicap_value == -2 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' wins by 1 goal'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ၁ ဂုုိးအသာျဖင့္ အနုုိင္ရခဲ့ပါ'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' မွ ရဂုုိး ၁ ဂုုိးဆုုိပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 1 golem'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - победа с разницей в 1 гол'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' câştigă la diferenţă de 1 gol'; }
@@ -1062,7 +1058,7 @@ function calculate() {
 						}
 						if ( handicap_value == 1 || handicap_value == 1.5 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' loses by 2 goals or more'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' ၂ ဂုုိး သုုိ႔  ၂ ဂုုိးအထက္ ရႈံးနိမ့္ခဲ့ပါက'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' ၂ ဂုုိး ( သုုိ႔ ) ၂ ဂုုိးအထက္ျဖင့္ ရႈံးခဲ့ပါက '; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Przegrana drużyny ' + home_or_away + ' 2 lub więcej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - проигрыш с разницей в 2 гола или более'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' pierde la diferenţă de 2 goluri sau mai mult'; }
@@ -1070,7 +1066,7 @@ function calculate() {
 						}
 						if ( handicap_value == 2 || handicap_value == 2.5 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' loses by 3 goals or more'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' ၃ ဂုုိး သုုိ႔  ၃ ဂုုိးအထက္ ရႈံးနိမ့္ခဲ့ပါက'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' ၃ ဂုုိး ( သုုိ႔ ) ၃ ဂုုိးအထက္ျဖင့္ ရႈံးခဲ့ပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Przegrana drużyny ' + home_or_away + ' 3 lub więcej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - проигрыш с разницей в 3 гола или более'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' pierde la diferenţă de 3 goluri sau mai mult'; }
@@ -1078,7 +1074,7 @@ function calculate() {
 						}
 						if ( handicap_value == 3 || handicap_value == 3.5 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' loses by 4 goals or more'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' ၄ ဂုုိး သုုိ႔ ၄ ဂုုိးအထက္ ရႈံးနိမ့္ခဲ့ပါက'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' ၄ ဂုုိး ( သုုိ႔ ) ၄ ဂုုိးအထက္ျဖင့္ ရႈံးခဲ့ပါက '; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Przegrana drużyny ' + home_or_away + ' 4 lub więcej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - проигрыш с разницей в 4 гола или более'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' pierde la diferenţă de 4 goluri sau mai mult'; }
@@ -1086,7 +1082,7 @@ function calculate() {
 						}
 						if ( handicap_value == 4 ) {
 							if ( lang_selected == 'eng' ) { result_texta[1] = home_or_away + ' loses by 5 goals or more'; }
-							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' ၅ ဂုုိး သုုိ႔ ၅ ဂုုိးအထက္ ရႈံးနိမ့္ခဲ့ပါက'; }
+							if ( lang_selected == 'ger' ) { result_texta[1] = home_or_away + ' ၅ ဂုုိး ( သုုိ႔ ) ၅ ဂုုိးအထက္ျဖင့္ ရႈံးခဲ့ပါက'; }
 							if ( lang_selected == 'pol' ) { result_texta[1] = 'Przegrana drużyny ' + home_or_away + ' 5 lub więcej golami'; }
 							if ( lang_selected == 'rus' ) { result_texta[1] = home_or_away + ' - проигрыш с разницей в 5 голов или более'; }
 							if ( lang_selected == 'rom' ) { result_texta[1] = home_or_away + ' pierde la diferenţă de 5 goluri sau mai mult'; }
@@ -1106,11 +1102,11 @@ function calculate() {
 						}
 						payout = Math.round( payout * 100 ) / 100;
 						profit = Math.round( profit * 100 ) / 100;
-						output = output + '<br /><table id="ds-result-table-single">'; // START TABLE
+						output = output + '<div class="container"><div class="row"><div class="col-lg-8 col-md-10"><section class="content-inner"><table class="table table-responsive id="ds-result-table-single">'; // START TABLE
 						output = output + '<tr><td>' + result_cell + ':</td><td>' + bet_result + '</td></tr>';
 						output = output + '<tr><td>' + payout_cell + ':</td><td>' + payout + '</td></tr>';
 						output = output + '<tr><td>' + profit_cell + ':</td><td>' + profit + '</td></tr>';
-						output = output + '</table><br /><br />'; // END TABLE
+						output = output + '</table></div></section></div></div></div>'; // END TABLE
 						start_repeat++;
 					}
 					repeat_output++;
@@ -1154,7 +1150,7 @@ function calculate() {
 								split_texta[1] = msg_win;
 								split_texta[2] = msg_draw;
 								if ( lang_selected == 'eng' ) { split_texta[3] = home_or_away + ' loses by 3 goals'; }
-								if ( lang_selected == 'ger' ) { split_texta[3] = home_or_away + 'မွ ၃ ဂုုိးျပတ္ ရႈံးနိမ့္ခဲ့ပါက'; }
+								if ( lang_selected == 'ger' ) { split_texta[3] = home_or_away + ' <span style="color:red">ေပးဂုုိး ၃ ဂုုိးဆုုိပါက ရႈံးပါသည္။</span>'; }
 								if ( lang_selected == 'pol' ) { split_texta[3] = 'Przegrana drużyny ' + home_or_away + ' 3 golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[3] = home_or_away + ' - проигрыш с разницей в 3 гола'; }
 								if ( lang_selected == 'rom' ) { split_texta[3] = home_or_away + ' pierde la diferenţă de 3 goluri'; }
@@ -1166,7 +1162,7 @@ function calculate() {
 								split_texta[1] = msg_win;
 								split_texta[2] = msg_draw;
 								if ( lang_selected == 'eng' ) { split_texta[3] = home_or_away + ' loses by 2 goals'; }
-								if ( lang_selected == 'ger' ) { split_texta[3] = home_or_away + ' မွ ၂ ဂုုိးျပတ္ ရႈံးနိမ့္ခဲ့ပါက'; }
+								if ( lang_selected == 'ger' ) { split_texta[3] = home_or_away + ' <span style="color:red">ေပးဂုုိး ၂ ဂုုိးဆုုိပါက ရႈံးပါသည္။</span>'; }
 								if ( lang_selected == 'pol' ) { split_texta[3] = 'Przegrana drużyny ' + home_or_away + ' 2 golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[3] = home_or_away + ' - проигрыш с разницей в 2 гола'; }
 								if ( lang_selected == 'rom' ) { split_texta[3] = home_or_away + ' pierde la diferenţă de 2 goluri'; }
@@ -1178,7 +1174,7 @@ function calculate() {
 								split_texta[1] = msg_win;
 								split_texta[2] = msg_draw;
 								if ( lang_selected == 'eng' ) { split_texta[3] = home_or_away + ' loses by 1 goal'; }
-								if ( lang_selected == 'ger' ) { split_texta[3] = home_or_away + 'မွ ၁ ဂုုိးျပတ္ ရႈံးနိမ့္ခဲ့ပါက '; }
+								if ( lang_selected == 'ger' ) { split_texta[3] = home_or_away + ' <span style="color:red">ေပးဂုုိး ၁ ဂုုိးဆုုိပါက ရႈံးပါသည္။</span>'; }
 								if ( lang_selected == 'pol' ) { split_texta[3] = 'Przegrana drużyny ' + home_or_away + ' 1 golem'; }
 								if ( lang_selected == 'rus' ) { split_texta[3] = home_or_away + ' - проигрыш с разницей в 1 гол'; }
 								if ( lang_selected == 'rom' ) { split_texta[3] = home_or_away + ' pierde la diferenţă de 1 gol'; }
@@ -1201,7 +1197,7 @@ function calculate() {
 								selector_home_option = 2;
 								selector_away_option = 0;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' wins by 2 goals or more'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ ၂ ဂုုိး သုုိ႔ ၂ ဂုုိးအထက္ျဖင့္ အနုုိင္ရခဲ့ပါက'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = '<span style="color:green">' + home_or_away + ' မွ ၂ ဂုုိး သုုိ႔ ၂ ဂုုိးအထက္ဆုုိပါက နုုိင္ပါသည္။</span>'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Wygrana drużyny ' + home_or_away + ' gości 2 lub więcej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - победа с разницей в 2 гола или более'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' câştigă la diferenţă de 2 goluri sau mai mult'; }
@@ -1211,7 +1207,7 @@ function calculate() {
 								selector_home_option = 3;
 								selector_away_option = 0;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' wins by 3 goals or more'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ ၃ ဂိုး သို႔ ၃ ဂိုးအထက္ဆိုပါက ႏိုင္ပါသည္။'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = '<span style="color:green">' + home_or_away +  ' မွ ၃ ဂုုိး သုုိ႔ ၃ ဂုုိးအထက္ဆုုိပါက နုုိင္ပါသည္။</span>'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Wygrana drużyny ' + home_or_away + ' gości 3 lub więcej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - победа с разницей в 3 гола или более'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' câştigă la diferenţă de 3 goluri sau mai mult'; }
@@ -1221,7 +1217,7 @@ function calculate() {
 								selector_home_option = 4;
 								selector_away_option = 0;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' wins by 4 goals or more'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ ၄ ဂိုး သို႔ ၄ ဂိုး အထက္ဆိုပါက ႏိုင္ပါသည္။'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = '<span style="color:green">' + home_or_away + 'မွ ၄ ဂုုိး သုုိ႔ ၄ ဂုုိးအထက္ဆုုိပါက နုုိင္ပါသည္။</span> '; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Wygrana drużyny ' + home_or_away + ' gości 4 lub więcej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - победа с разницей в 4 гола или более'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' câştigă la diferenţă de 4 goluri sau mai mult'; }
@@ -1231,7 +1227,7 @@ function calculate() {
 								selector_home_option = 5;
 								selector_away_option = 0;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' wins by 5 goals or more'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ ၅ ဂိုး သို႔ ၅ ဂိုး အထက္ဆိုပါက ႏိုင္ပါသည္။'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = '<span style="color:green">' + home_or_away + ' မွ ၅ ဂုုိး သုုိ႔ ၅ ဂုုိးအထက္ဆုုိပါက နုုိင္ပါသည္။</span>'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Wygrana drużyny ' + home_or_away + ' gości 5 lub więcej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - победа с разницей в 5 голов или более'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' câştigă la diferenţă de 5 goluri sau mai mult'; }
@@ -1252,12 +1248,12 @@ function calculate() {
 									}
 									if ( lang_selected == 'ger' ) {
 										if ( a > b ) {
-											win_lose_text = ' အႏိုင္';
-											win_lose_text2 = ' ႏိုင္';
+											win_lose_text = ' <span style="color=green">နုုိင္</span>';
+											win_lose_text2 = ' <span style="color=green">ရႈံး</span>';
 										}
 										else {
-											win_lose_text = ' အရႈံး';
-											win_lose_text2 = ' ရႈံး';
+											win_lose_text = ' verliert';
+											win_lose_text2 = ' Rückstand';
 										}
 										if ( Math.abs(goal) > 1 ) { pl = ' Toren'; } else { pl = ' Tor'; } // PLURAL
 										split_texta[1] = home_or_away + win_lose_text + ' mit ' + Math.abs(goal) + pl + win_lose_text2;
@@ -1294,7 +1290,7 @@ function calculate() {
 								selector_home_option = 0;
 								selector_away_option = 0;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' wins by 3 goals or less'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ ၃ ဂုုိး သုုိ႔ ၃ အထက္ဆုုိပါက'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = '<span style="color:green">' +home_or_away + 'မွ ၃ ဂုုိး သုုိ႔ ၃ ဂုုိးေအာက္ဆုုိပါက နုုိင္ပါသည္။</span>'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 3 lub mniej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - победа с разницей в 3 гола или менее'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' câştigă la diferenţă de 3 goluri sau mai puţin'; }
@@ -1306,7 +1302,7 @@ function calculate() {
 								selector_home_option = 0;
 								selector_away_option = 0;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' wins by 2 goals or less'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' gewinnt mit 2 oder weniger Toren Vorsprung'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = '<span style="color:green">' +home_or_away + 'မွ ၂ ဂုုိး သုုိ႔ ၂ ဂုုိးေအာက္ဆုုိပါက နုုိင္ပါသည္။</span>'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 2 lub mniej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - победа с разницей в 2 гола или менее'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' câştigă la diferenţă de 2 goluri sau mai puţin'; }
@@ -1318,7 +1314,7 @@ function calculate() {
 								selector_home_option = 0;
 								selector_away_option = 0;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' wins by 1 goal'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ  ၁ ဂိုး  ဆိုပါက ႏိုင္ပါသည္။'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = '<span style="color:green">'+home_or_away +'မွ ရဂုုိး ၁ ဂုုိး ဆုုိပါက နုုိင္ပါသည္။</span>'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Wygrana drużyny ' + home_or_away + ' 1 lub mniej golem'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - победа с разницей в 1 гол'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' câştigă la diferenţă de 1 gol'; }
@@ -1343,7 +1339,7 @@ function calculate() {
 								selector_home_option = 0;
 								selector_away_option = 2;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' loses by 2 goals or more'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ ၂ ဂိုး သို႔ ၂ ဂိုး အထက္ဆိုပါက ႐ႈံးပါသည္။'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' verliert mit 2 oder mehr Toren Rückstand'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Przegrana drużyny ' + home_or_away + ' 2 lub więcej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - проигрыш с разницей в 2 гола или более'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' pierde la diferenţă de 2 goluri sau mai mult'; }
@@ -1353,7 +1349,7 @@ function calculate() {
 								selector_home_option = 0;
 								selector_away_option = 3;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' loses by 3 goals or more'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ ၃ ဂိုး သို႔ ၃ ဂိုး အထက္ဆိုပါက ႐ႈံးပါသည္။'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' verliert mit 3 oder mehr Toren Rückstand'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Przegrana drużyny ' + home_or_away + ' 3 lub więcej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - проигрыш с разницей в 3 гола или более'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' pierde la diferenţă de 3 goluri sau mai mult'; }
@@ -1363,7 +1359,7 @@ function calculate() {
 								selector_home_option = 0;
 								selector_away_option = 4;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' loses by 4 goals or more'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ ၄ ဂိုး သို႔ ၄ ဂိုး အထက္ဆိုပါက ႐ႈံးပါသည္။'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' verliert mit 4 oder mehr Toren Rückstand'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Przegrana drużyny ' + home_or_away+ ' 4 lub więcej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - проигрыш с разницей в 4 гола или более'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' pierde la diferenţă de 4 goluri sau mai mult'; }
@@ -1373,7 +1369,7 @@ function calculate() {
 								selector_home_option = 0;
 								selector_away_option = 5;
 								if ( lang_selected == 'eng' ) { split_texta[1] = home_or_away + ' loses by 5 goals or more'; }
-								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' မွ ၄ ဂိုး သို႔ ၄ ဂိုး အထက္ဆိုပါက ႐ႈံးပါသည္။'; }
+								if ( lang_selected == 'ger' ) { split_texta[1] = home_or_away + ' verliert mit 5 oder mehr Toren Rückstand'; }
 								if ( lang_selected == 'pol' ) { split_texta[1] = 'Przegrana drużyny ' + home_or_away + ' 5 lub więcej golami'; }
 								if ( lang_selected == 'rus' ) { split_texta[1] = home_or_away + ' - проигрыш с разницей в 5 голов или более'; }
 								if ( lang_selected == 'rom' ) { split_texta[1] = home_or_away + ' pierde la diferenţă de 5 goluri sau mai mult'; }
@@ -1429,14 +1425,14 @@ function calculate() {
 						profit_a = Math.round( profit_a * 100 ) / 100;
 						profit_b = Math.round( profit_b * 100 ) / 100;
 						if ( final_score_type == 'all' ) {
-							output = output + '<div class="result-title">' + split_texta[split_start+1] + '</div>';
+							output = output + '<div class="result-title">' + split_texta[split_start+1] + '</div></div>';
 						}
 						if ( final_score_type == 'score' ) {
 							output = output + '<div class="result-title">' + heading_text + '</div>';
 						}
-						output = output + '<br /><table id="ds-result-table-split">'; // START TABLE
+						output = output + '<table class="table table-responsive" id="ds-result-table-split">'; // START TABLE
 						output = output + '<tr><td></td><td colspan="2">' + half_bets_cell + '</td><td>' + overall_bet_cell + '</td></tr>';
-						if ( lang_selected == 'eng' ) { handicap_cell = 'ေၾကးေက်ာ'; }
+						if ( lang_selected == 'eng' ) { handicap_cell = 'Handicap'; }
 						if ( lang_selected == 'ger' ) { handicap_cell = 'Handicap'; }
 						if ( lang_selected == 'pol' ) { handicap_cell = 'Handicap'; }
 						if ( lang_selected == 'rus' ) { handicap_cell = 'Гандикап'; }
@@ -1462,7 +1458,7 @@ function calculate() {
 						profit_sum = profit_a + profit_b;
 						profit_sum = Math.round( profit_sum * 100 ) / 100;
 						output = output + '<tr><td>' + profit_cell + ':</td><td>' + profit_a + '</td><td>' + profit_b + '</td><td>' + profit_sum + '</td></tr>';
-						output = output + '</table><br /><br /><br />';
+						output = output + '</table></div></section></div></div></div>';
 						split_start++;
 					}
 					repeat_output++;
@@ -1493,7 +1489,7 @@ function calculate() {
 							repeat_time = 2;
 							repeat_case = 0;
 							if ( lang_selected == 'eng' ) { over_title = 'Over Bet Outcome'; }
-							if ( lang_selected == 'ger' ) { over_title = 'ဂုုိးေအာက္တြက္ခ်က္မႈ ရလဒ္'; }
+							if ( lang_selected == 'ger' ) { over_title = 'ဂုုိးေပၚေၾကး တြက္ခ်က္မႈအရ'; }
 							if ( lang_selected == 'pol' ) { over_title = 'Rozstrzygnięcie zakładu Powyżej'; }
 							if ( lang_selected == 'rus' ) { over_title = 'Результат ставки на повышение'; }
 							if ( lang_selected == 'rom' ) { over_title = 'Rezultat Pariu Over'; }
@@ -1523,7 +1519,7 @@ function calculate() {
 							if ( repeat_case == 1 ) {
 								goals = Math.floor( selector_over_option ) + 1;
 								if ( lang_selected == 'eng' ) { over_title = 'Total number of goals is ' + goals + ' or more'; }
-								if ( lang_selected == 'ger' ) { over_title = ' နွစ္ဖက္အသင္း သြင္းဂုုိးေပါင္း ' + goals + ' သုုိ႔' + goals + 'အထက္ဆုုိပါက'; }
+								if ( lang_selected == 'ger' ) { over_title = 'Gesamtanzahl der Tore: ' + goals + ' oder mehr'; }
 								if ( lang_selected == 'pol' ) { over_title = 'Całkowita liczba goli wynosi ' + goals + ' lub więcej'; }
 								if ( lang_selected == 'rus' ) { over_title = 'Общее количество голов - ' + goals + ' или более'; }
 								if ( lang_selected == 'rom' ) { over_title = 'Numărul total de goluri este ' + goals + ' sau mai mult'; }
@@ -1532,32 +1528,32 @@ function calculate() {
 							if ( repeat_case == 2 && selector_over_option % 1 == 0 ) {
 								goals = Math.round( selector_over_option );
 								if ( lang_selected == 'eng' ) { over_title = 'Total number of goals is ' + goals; }
-								if ( lang_selected == 'ger' ) { over_title = ' နွစ္သင္းေပါင္း ဂုုိးရလဒ္ ' + goals + ' ဆုုိပါက '; }
-								if ( lang_selected == 'pol' ) { over_title = 'နွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ ' + goals; }
+								if ( lang_selected == 'ger' ) { over_title = 'Gesamtanzahl der Tore: ' + goals; }
+								if ( lang_selected == 'pol' ) { over_title = 'Całkowita liczba goli wynosi ' + goals; }
 								if ( lang_selected == 'rus' ) { over_title = 'Общее количество голов - ' + goals; }
 								if ( lang_selected == 'rom' ) { over_title = 'Numărul total de goluri este ' + goals; }
 								lost_goals = goals - 1;
 							}
 							if ( repeat_case == 3 ) {
 								if ( lang_selected == 'eng' ) { over_title = 'Total number of goals is ' + lost_goals + ' or less'; }
-								if ( lang_selected == 'ger' ) { over_title = 'နွစ္သင္းေပါင္း ဂုုိးရလဒ္ ' + lost_goals + ' သုုိ႔ ေအာက္ဆုုိပါက'; }
+								if ( lang_selected == 'ger' ) { over_title = 'Gesamtanzahl der Tore: ' + lost_goals + ' oder weniger'; }
 								if ( lang_selected == 'pol' ) { over_title = 'Całkowita liczba goli wynosi ' + lost_goals + ' lub mniej'; }
 								if ( lang_selected == 'rus' ) { over_title = 'Общее количество голов - ' + lost_goals + ' или менее'; }
 								if ( lang_selected == 'rom' ) { over_title = 'Numărul total de goluri este ' + lost_goals + ' sau mai puţin'; }
 								if ( lost_goals == 0 ) {
 									if ( lang_selected == 'eng' ) { over_title = 'Total number of goals is ' + lost_goals; }
-									if ( lang_selected == 'ger' ) { over_title = 'နွစ္သင္းေပါင္း ဂုုိးရလဒ္ ' + lost_goals; }
+									if ( lang_selected == 'ger' ) { over_title = 'Gesamtanzahl der Tore: ' + lost_goals; }
 									if ( lang_selected == 'pol' ) { over_title = 'Całkowita liczba goli wynosi ' + lost_goals; }
 									if ( lang_selected == 'rus' ) { over_title = 'Общее количество голов - ' + lost_goals; }
 									if ( lang_selected == 'rom' ) { over_title = 'Numărul total de goluri este ' + goals; }
 								}
 							}
-							output = output + '<div class="result-title">' + over_title + '</div>';
-							output = output + '<br /><table id="ds-result-table-single">';
-							output = output + '<tr><td>' + result_cell + ':</td><td>' + over_result + '</td></tr>';
+							output = output + '<div class="container"><div class="row"><div class="col-lg-8 col-md-10"><section class="content-inner"><div class="result-title">' + over_title + '</div>';
+							output = output + '<table class="table table-responsive" id="ds-result-table-single">';
+							output = output + '<thead><tr><td></td><td colspan="2"><tr><td>' + result_cell + ':</td><td>' + over_result + '</td></tr></thead>';
 							output = output + '<tr><td>' + payout_cell + ':</td><td>' + Math.round( payout * 100 ) / 100 + '</td></tr>';
 							output = output + '<tr><td>' + profit_cell + ':</td><td>' + Math.round( profit * 100 ) / 100 + '</td></tr>';
-							output = output + '</table><br /><br />';
+							output = output + '</table></div></section></div></div></div>';
 							repeat_time++;
 							repeat_case++;
 							if ( selector_over_option % 1 != 0 ) {
@@ -1571,7 +1567,7 @@ function calculate() {
 						if ( final_score_type == 'score' ) {
 							repeat_time = 2;
 							if ( lang_selected == 'eng' ) { over_title = 'Over Bet Outcome'; }
-							if ( lang_selected == 'ger' ) { over_title = 'ဂုုိးေပၚေလာင္းေၾကး တြက္ခ်က္မႈအရ'; }
+							if ( lang_selected == 'ger' ) { over_title = 'ဂုုိးေပၚ တြက္ခ်က္မႈအရ'; }
 							if ( lang_selected == 'pol' ) { over_title = 'Rozstrzygnięcie zakładu Powyżej'; }
 							if ( lang_selected == 'rus' ) { over_title = 'Ставка на повышение'; }
 							if ( lang_selected == 'rom' ) { over_title = 'Rezultat Pariu Over'; }
@@ -1654,18 +1650,18 @@ function calculate() {
 								}
 							}
 							if ( lang_selected == 'ger' ) {
-								if ( final_score_type != 'ဂုုိးရလဒ္' ) {
-									if ( result_final == 'နုုိင္' ) {
-										over_title = 'နွစ္သင္းေပါင္း သြင္းဂုုိး ' + score_sum + ' ဂုုိး သုုိ႔' + score_sum + 'ဂုုိး အထက္ဆုုိပါက';
+								if ( final_score_type != 'score' ) {
+									if ( result_final == ' <span style="color=green">နုုိင္</span> ' ) {
+										over_title = ' နွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ ' + score_sum + ' သုုိ႔ ' + score_sum + ' အထက္ဆုုိပါက ';
 									}
-									if ( result_final == 'ရႈံး' ) {
-										over_title = 'နွစ္သင္းေပါင္း သြင္းဂုုိး ' + score_sum + ' ဂုုိး သုုိ႔' + score_sum + ' ဂုုိး ေအာက္ဆုုိပါက';
+									if ( result_final == ' <span style="color=red">ရႈံး</span> ' ) {
+										over_title = ' ႏွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ ' + score_sum + ' သုုိ႔ ' + score_sum + ' ေအာက္ဆုုိပါက ';
 										if ( score_sum == 0 ) {
-											over_title = 'နွစ္သင္းေပါင္း သြင္းဂုုိး ' + score_sum;
+											over_title = ' ႏွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ ' + score_sum + ' ဆုုိပါက ' ;
 										}
 									}
-									if ( result_final == 'halber Gewinn' || result_final == '<b style="color:green">တစ္၀</b><b style="color:red">က္ရႈံး</b>' ) {
-										over_title = 'နွစ္သင္းေပါင္း သြင္းဂုုိး ' + score_sum +  'ဂုုိး ဆုုိပါက';
+									if ( result_final == ' တစ္၀က္နုုိင္ ' || result_final == ' တစ္၀က္ရႈံး ' ) {
+										over_title = 'နွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ ' + score_sum + ' တစ္၀က္ရႈံး ';
 									}
 								}
 							}
@@ -1718,19 +1714,19 @@ function calculate() {
 								}
 							}
 							if ( lang_selected == 'eng' ) { over_bet_cell = 'Over Bet'; }
-							if ( lang_selected == 'ger' ) { over_bet_cell = 'ဂုုိးေပၚေၾကး'; }
+							if ( lang_selected == 'ger' ) { over_bet_cell = 'ဂုုိိးေပၚ'; }
 							if ( lang_selected == 'pol' ) { over_bet_cell = 'Zakład na Powyżej'; }
 							if ( lang_selected == 'rus' ) { over_bet_cell = 'Ставка на повышение'; }
 							if ( lang_selected == 'rom' ) { over_bet_cell = 'Pariu Deasupra'; }
-							output = output + '<div class="result-title">' + over_title + '</div>';
-							output = output + '<br /><table id="ds-result-table-split" style="width:100%; font-family:Zawgyi-One">';
+							output = output + '<div class="container"><div class="row"><div class="col-lg-8 col-md-10"><section class="content-inner"><div class="result-title">' + over_title + '</div>';
+							output = output + '<table id="ds-result-table-split">';
 							output = output + '<tr><td></td><td colspan="2">' + half_bets_cell + '</td><td>' + overall_bet_cell + '</td></tr>'
 							output = output + '<tr><td>' + over_bet_cell + ':</td><td>' + over_bet_a + '</td><td>' + over_bet_b + '</td><td>' + selector_over_option + '</td></tr>';
 							output = output + '<tr><td>' + wager_cell + ':</td><td>' + wager + '</td><td>' + wager + '</td><td>' + stake_value + '</td></tr>';
 							output = output + '<tr><td>' + result_cell + ':</td><td>' + result_a + '</td><td>' + result_b + '</td><td>' + result_final + '</td></tr>';
 							output = output + '<tr><td>' + payout_cell + ':</td><td>' + pay_a + '</td><td>' + pay_b + '</td><td>' + pay_total + '</td></tr>';
 							output = output + '<tr><td>' + profit_cell + ':</td><td>' + profit_a + '</td><td>' + profit_b + '</td><td>' + profit_total + '</td></tr>';
-							output = output + '</table><br /><br />';
+							output = output + '</table></div></section></div></div></div>';
 							repeat_time++;
 						}
 					}
@@ -1743,7 +1739,7 @@ function calculate() {
 							repeat_time = 2;
 							repeat_case = 0;
 							if ( lang_selected == 'eng' ) { over_title = 'Under Bet Outcome'; }
-							if ( lang_selected == 'ger' ) { over_title = 'ဂုုိးေအာက္တြက္ခ်က္မႈရလဒ္မွာ'; }
+							if ( lang_selected == 'ger' ) { over_title = 'ဂုုိးေအာက္တြက္ခ်က္မႈအရ'; }
 							if ( lang_selected == 'pol' ) { over_title = 'Rozstrzygnięcie zakładu Poniżej'; }
 							if ( lang_selected == 'rus' ) { over_title = 'Результат ставки на понижение'; }
 							if ( lang_selected == 'rom' ) { over_title = 'Rezultat Pariu Under'; }
@@ -1783,9 +1779,9 @@ function calculate() {
 									}
 								}
 								if ( lang_selected == 'ger' ) {
-									over_title = ' နွစ္ဖက္အသင္း ဂုုိးရလဒ္ေပါင္း ' + goals+ ' ဂုုိး သုုိ႔' + goals + ' ဂုုိး ေအာက္ဆုုိပါက';
+									over_title = 'ႏွစ္သင္းေပါင္း ဂုုိိးရလဒ္ဟာ ' + goals + ' သုုိ႔ '  + goals +' ေအာက္ဆုုိပါက' ;
 									if ( goals == 0 ) {
-										over_title = ' နွစ္ဖက္အသင္း ဂုုိးရလဒ္ေပါင္း ' + goals;
+										over_title = ' ႏွစ္သင္းေပါင္းဂုုိးရလဒ္ဟာ ' + goals + ' ဆုုိပါက ' ;
 									}
 								}
 								if ( lang_selected == 'pol' ) {
@@ -1809,7 +1805,7 @@ function calculate() {
 							}
 							if ( repeat_case == 2 ) {
 								if ( lang_selected == 'eng' ) { over_title = 'Total number of goals is ' + Math.round( selector_over_option ); }
-								if ( lang_selected == 'ger' ) { over_title = ' နွစ္ဖက္အသင္း ဂုုိးရလဒ္ေပါင္း ' + Math.round( selector_over_option ); }
+								if ( lang_selected == 'ger' ) { over_title = 'ႏွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ ' + Math.round( selector_over_option ); }
 								if ( lang_selected == 'pol' ) { over_title = 'Całkowita liczba goli wynosi ' + Math.round( selector_over_option ); }
 								if ( lang_selected == 'rus' ) { over_title = 'Общее количество голов - ' + Math.round( selector_over_option ); }
 								if ( lang_selected == 'rom' ) { over_title = 'Numărul total de goluri este ' + Math.round( selector_over_option ); }
@@ -1817,17 +1813,17 @@ function calculate() {
 							if ( repeat_case == 3 ) {
 								goals = Math.floor( selector_over_option ) + 1;
 								if ( lang_selected == 'eng' ) { over_title = 'Total number of goals is ' + goals + ' or more'; }
-								if ( lang_selected == 'ger' ) { over_title = 'နွစ္ဖက္အသင္း ဂုုိးရလဒ္ေပါင္း ' + goals + ' သို႔' + goals + အထက္ဆိုပါက'; }
+								if ( lang_selected == 'ger' ) { over_title = 'နွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ ' + goals + ' (သုုိ႔) ' + goals + ' အထက္ဆုုိပါက '; }
 								if ( lang_selected == 'pol' ) { over_title = 'Całkowita liczba goli wynosi ' + goals + ' lub więcej'; }
 								if ( lang_selected == 'rus' ) { over_title = 'Общее количество голов - ' + goals + ' или более'; }
 								if ( lang_selected == 'rom' ) { over_title = 'Numărul total de goluri este ' + goals + ' sau mai mult'; }
 							}
-							output = output + '<div class="result-title">' + over_title + '</div>';
-							output = output + '<br /><table id="ds-result-table-single">';
+							output = output + '<div class="container"><div class="row"><div class="col-lg-8 col-md-10"><section class="content-inner"><div class="result-title">' + over_title + '</div>';
+							output = output + '<table class="table table-responsive" id="ds-result-table-single">';
 							output = output + '<tr><td>' + result_cell + ':</td><td>' + over_result + '</td></tr>';
 							output = output + '<tr><td>' + payout_cell + ':</td><td>' + Math.round( payout * 100 ) / 100 + '</td></tr>';
 							output = output + '<tr><td>' + profit_cell + ':</td><td>' + Math.round( profit * 100 ) / 100 + '</td></tr>';
-							output = output + '</table><br /><br />';
+							output = output + '</table></div></section></div></div></div>';
 							repeat_time++;
 							repeat_case++;
 							if ( selector_over_option % 1 != 0 ) {
@@ -1841,7 +1837,7 @@ function calculate() {
 						if ( final_score_type == 'score' ) {
 							repeat_time = 2;
 							if ( lang_selected == 'eng' ) { over_title = 'Under Bet Outcome'; }
-							if ( lang_selected == 'ger' ) { over_title = 'ဂုုိးေအာက္တြက္ခ်က္မႈ ရလဒ္'; }
+							if ( lang_selected == 'ger' ) { over_title = 'ဂုုိးေအာက္တြက္ခ်က္မႈအရ'; }
 							if ( lang_selected == 'pol' ) { over_title = 'Rozstrzygnięcie zakładu Poniżej'; }
 							if ( lang_selected == 'rus' ) { over_title = 'Результат ставки на понижение'; }
 							if ( lang_selected == 'rom' ) { over_title = 'Rezultat Pariu Under'; }
@@ -1920,17 +1916,17 @@ function calculate() {
 									}
 								}
 								if ( lang_selected == 'ger' ) {
-									if ( result_final == 'ႏိုင္' ) {
-										over_title = 'နွစ္ဖက္အသင္း ဂုုိးရလဒ္ေပါင္း ' + score_sum + ' သို႔ ' + score_sum + ' ေအာက္ဆိုပါက';
+									if ( result_final == 'နုုိင္' ) {
+										over_title = 'ဂုုိးရလဒ္ေပါင္း: ' + score_sum + ' (သုုိ႔)  ' + score_sum + ' ေအာက္ဆုုိပါက ';
 										if ( score_sum == 0 ) {
-											over_title = 'နွစ္ဖက္အသင္း ဂုုိးရလဒ္ေပါင္း' + score_sum + ' ဆိုပါက ';
+											over_title = 'ႏွစ္သင္းေပါင္း ဂုုိးရလဒ္: ' + score_sum;
 										}
 									}
-									if ( result_final == '႐ႈံး' ) {
-										over_title = 'နွစ္ဖက္အသင္း ဂုုိးရလဒ္ေပါင္း ' + score_sum + ' သို႔ ' + score_sum + ' အထက္ဆိုပါက ';
+									if ( result_final == 'ရႈံး' ) {
+										over_title = 'ႏွစ္သင္းေပါင္း ဂုုိးရလဒ္: ' + score_sum + '  (သုုိ႔)  ' + score_sum + ' အထက္ဆုုိပါက ';
 									}
-									if ( result_final == 'တစ္ဝက္႐ႈံး || result_final == ' တစ္ဝက္ႏိုင္ ' ) {
-										over_title = ' ႏွစ္ဖက္အသင္း ဂုုိးရလဒ္ေပါင္း ' + score_sum + 'ဆိုပါက ';
+									if ( result_final == 'တစ္၀က္နုုိင္' || result_final == 'တ၀က္ရႈံး' ) {
+										over_title = 'နွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ: ' + score_sum;
 									}
 								}
 								if ( lang_selected == 'pol' ) {
@@ -1977,19 +1973,19 @@ function calculate() {
 								}
 							}
 							if ( lang_selected == 'eng' ) { under_bet_cell = 'Under Bet'; }
-							if ( lang_selected == 'ger' ) { under_bet_cell = 'ဂိုးေအာက္'; }
+							if ( lang_selected == 'ger' ) { under_bet_cell = 'ဂုုိးေအာက္'; }
 							if ( lang_selected == 'pol' ) { under_bet_cell = 'Zakład na Poniżej'; }
 							if ( lang_selected == 'rus' ) { under_bet_cell = 'Ставка на понижение'; }
 							if ( lang_selected == 'rom' ) { under_bet_cell = 'Pariu Dedesubt'; }
-							output = output + '<div class="result-title">' + over_title + '</div>';
-							output = output + '<br /><br /><table id="ds-result-table-split">';
-							output = output + '<tr><td></td><td colspan="2">' + half_bets_cell + '</td><td>' + overall_bet_cell + '</td></tr>'
+							output = output + '<div class="container"><div class="row"><div class="col-lg-8 col-md-10"><section class="content-inner"><div class="result-title">' + over_title + '</div>';
+							output = output + '<table class="table table-responsive" id="ds-result-table-split">';
+							output = output + '<thead><tr><td></td><td colspan="2">' + half_bets_cell + '</td><td>' + overall_bet_cell + '</td></tr></thead>'
 							output = output + '<tr><td>' + under_bet_cell + ':</td><td>' + over_bet_a + '</td><td>' + over_bet_b + '</td><td>' + selector_over_option + '</td></tr>';
 							output = output + '<tr><td>' + wager_cell + ':</td><td>' + wager + '</td><td>' + wager + '</td><td>' + stake_value + '</td></tr>';
 							output = output + '<tr><td>' + result_cell + ':</td><td>' + result_a + '</td><td>' + result_b + '</td><td>' + result_final + '</td></tr>';
 							output = output + '<tr><td>' + payout_cell + ':</td><td>' + pay_a + '</td><td>' + pay_b + '</td><td>' + pay_total + '</td></tr>';
 							output = output + '<tr><td>' + profit_cell + ':</td><td>' + profit_a + '</td><td>' + profit_b + '</td><td>' + profit_total + '</td></tr>';
-							output = output + '</table><br /><br />';
+							output = output + '</table></div></section></div></div></div>';
 							repeat_time++;
 						}
 					}
@@ -1999,7 +1995,7 @@ function calculate() {
 		}
 		else {
 			if ( lang_selected == 'eng' ) { document.getElementById( 'odds_error' ).innerHTML = 'Wrong odds format'; }
-			if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'မွားယြင္းေနပါသည္။'; }
+			if ( lang_selected == 'ger' ) { document.getElementById( 'odds_error' ).innerHTML = 'ေၾကးထည့္သြင္းပုုံ မွားယြင္းေနပါတယ္။'; }
 			if ( lang_selected == 'pol' ) { document.getElementById( 'odds_error' ).innerHTML = 'Nieprawidłowy format kursu'; }
 			if ( lang_selected == 'rus' ) { document.getElementById( 'odds_error' ).innerHTML = 'Неверный формат коэффициентов'; }
 			if ( lang_selected == 'rom' ) { document.getElementById( 'odds_error' ).innerHTML = 'Formatul cotelor incorect'; }
@@ -2008,7 +2004,7 @@ function calculate() {
 	}
 	else {
 		if ( lang_selected == 'eng' ) { document.getElementById( 'stake_error' ).innerHTML = 'Wrong stake format'; }
-		if ( lang_selected == 'ger' ) { document.getElementById( 'stake_error' ).innerHTML = 'ေလာင္းေၾကး ထည့္သြင္းျခင္း မွားယြင္းေနပါသည္။ ' ; }
+		if ( lang_selected == 'ger' ) { document.getElementById( 'stake_error' ).innerHTML = 'ေလာင္းေၾကးထည့္တာမွားေနပါတယ္။'; }
 		if ( lang_selected == 'pol' ) { document.getElementById( 'stake_error' ).innerHTML = 'Nieprawidłowy format stawki'; }
 		if ( lang_selected == 'rus' ) { document.getElementById( 'stake_error' ).innerHTML = 'Неверный формат ставок'; }
 		if ( lang_selected == 'rom' ) { document.getElementById( 'stake_error' ).innerHTML = 'Formatul mizei incorect'; }
@@ -2024,7 +2020,7 @@ function reset_form() {
 	document.getElementById( 'odd_input' ).value = 1.91; // CHANGE HANDICAP TEXT
 	document.getElementById( 'stake' ).value = 100; // CHANGE HANDICAP TEXT
 	document.getElementById( 'result' ).innerHTML = ''; // MAKE THE OUTPUT
-	hello = '<select id="select_handicap"><option value="-4.00">-4.00</option><option value="-3.75">-3.75 (-3.5, -4.0)</option><option value="-3.50">-3.50</option><option value="-3.25">-3.25 (-3.0, -3.5)</option><option value="-3.00">-3.00</option><option value="-2.75">-2.75 (-2.5, -3.0)</option><option value="-2.50">-2.50</option><option value="-2.25">-2.25 (-2.0, -2.5)</option><option value="-2.00">-2.00</option><option value="-1.75">-1.75 (-1.5, -2.0)</option><option value="-1.50">-1.50</option><option value="-1.25">-1.25 (-1.0, -1.5)</option><option value="-1.00">-1.00</option><option value="-0.75">-0.75 (-0.5, -1.0)</option><option value="-0.50">-0.50</option><option value="-0.25">-0.25 (0.0, -0.5)</option><option value="0.00" selected="selected">0.0 (Level)</option><option value="0.25">+0.25 (+0.0, +0.5)</option><option value="0.50">+0.50</option><option value="0.75">+0.75 (+0.5, +1.0)</option><option value="1.00">+1.00</option><option value="1.25">+1.25 (+1.0, +1.5)</option><option value="1.50">+1.50</option><option value="1.75">+1.75 (+1.5, +2.0)</option><option value="2.00">+2.00</option><option value="2.25">+2.25 (+2.0, +2.5)</option><option value="2.50">+2.50</option><option value="2.75">+2.75 (+2.5, +3.0)</option><option value="3.00">+3.00</option><option value="3.25">+3.25 (+3.0, +3.5)</option><option value="3.50">+3.50</option><option value="3.75">+3.75 (+3.5, +4.0)</option><option value="4.00">+4.00</option></select>';
+	hello = '<select class="form-control" id="select_handicap"><option value="-4.00">-4.00</option><option value="-3.75">-3.75 (-3.5, -4.0)</option><option value="-3.50">-3.50</option><option value="-3.25">-3.25 (-3.0, -3.5)</option><option value="-3.00">-3.00</option><option value="-2.75">-2.75 (-2.5, -3.0)</option><option value="-2.50">-2.50</option><option value="-2.25">-2.25 (-2.0, -2.5)</option><option value="-2.00">-2.00</option><option value="-1.75">-1.75 (-1.5, -2.0)</option><option value="-1.50">-1.50</option><option value="-1.25">-1.25 (-1.0, -1.5)</option><option value="-1.00">-1.00</option><option value="-0.75">-0.75 (-0.5, -1.0)</option><option value="-0.50">-0.50</option><option value="-0.25">-0.25 (0.0, -0.5)</option><option value="0.00" selected="selected">0.0 (Level)</option><option value="0.25">+0.25 (+0.0, +0.5)</option><option value="0.50">+0.50</option><option value="0.75">+0.75 (+0.5, +1.0)</option><option value="1.00">+1.00</option><option value="1.25">+1.25 (+1.0, +1.5)</option><option value="1.50">+1.50</option><option value="1.75">+1.75 (+1.5, +2.0)</option><option value="2.00">+2.00</option><option value="2.25">+2.25 (+2.0, +2.5)</option><option value="2.50">+2.50</option><option value="2.75">+2.75 (+2.5, +3.0)</option><option value="3.00">+3.00</option><option value="3.25">+3.25 (+3.0, +3.5)</option><option value="3.50">+3.50</option><option value="3.75">+3.75 (+3.5, +4.0)</option><option value="4.00">+4.00</option></select>';
 	document.getElementById( 'selection_cell' ).innerHTML = hello; // MAKE THE OUTPUT
 	document.getElementById( 'final_score_check' ).checked = true;
 	document.getElementById( 'final_score_row' ).style.display = ''; // SHOW LAST ROW
