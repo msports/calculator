@@ -1805,7 +1805,7 @@ function calculate() {
 							}
 							if ( repeat_case == 2 ) {
 								if ( lang_selected == 'eng' ) { over_title = 'Total number of goals is ' + Math.round( selector_over_option ); }
-								if ( lang_selected == 'ger' ) { over_title = 'ႏွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ ' + Math.round( selector_over_option ); }
+								if ( lang_selected == 'ger' ) { over_title = ' ႏွစ္သင္းေပါင္း ဂုုိးရလဒ္ဟာ ' + Math.round( selector_over_option ); }
 								if ( lang_selected == 'pol' ) { over_title = 'Całkowita liczba goli wynosi ' + Math.round( selector_over_option ); }
 								if ( lang_selected == 'rus' ) { over_title = 'Общее количество голов - ' + Math.round( selector_over_option ); }
 								if ( lang_selected == 'rom' ) { over_title = 'Numărul total de goluri este ' + Math.round( selector_over_option ); }
